@@ -1,0 +1,12 @@
+version: '2'
+services:
+  nicotine:
+    build: .
+    ports:
+      - "6080:6080"
+    volumes:
+      - nicotine:/root/.nicotine
+      - downloads:/root/nicotine-downloads
+volumes:
+  nicotine:
+  downloads:
