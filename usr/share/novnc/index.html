@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+ <head>
+  <style>
+   html, body { margin:0; padding: 0; height: 100%; width: 100% }
+   iframe { width: 100%; border: 0 }
+   #vnc { height: 80% }
+   span { position: absolute; bottom: 0; left: 0 }
+  </style>
+ </head>
+ <body>
+  <iframe id="vnc" src="vnc_lite.html"></iframe>
+  <iframe id="downloads" src="nicotine-downloads/"></iframe>
+  <span>
+   <button onclick="document.getElementById('downloads').contentWindow.history.back()">&lt;</button>
+   <button onclick="document.getElementById('downloads').contentWindow.location.reload()">Reload</button>
+   <button onclick="document.getElementById('downloads').contentWindow.history.forward()">&gt;</button>
+  </span>
+ </body>
+</html>
