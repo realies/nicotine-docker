@@ -1,6 +1,6 @@
 from alpine:edge
 run apk update && apk upgrade && \
- apk add --virtual build-dependencies py2-pip && \
+ apk add --virtual build-dependencies py3-pip && \
  apk add bash supervisor xvfb x11vnc ttf-dejavu openbox dbus && \
  apk add novnc nicotine-plus --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
  pip install mutagen && \
