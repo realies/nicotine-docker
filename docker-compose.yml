@@ -7,6 +7,7 @@ services:
     volumes:
       - nicotine:/root/.nicotine
       - downloads:/root/nicotine-downloads
+      - /media/s/be3654b3-8643-4a6e-9477-68327cc11ff5/Music:/root/nicotine-share:ro
 volumes:
   nicotine:
   downloads:
