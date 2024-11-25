@@ -1,9 +1,11 @@
-version: '2'
 services:
   nicotine:
     build: .
     ports:
-      - "6080:6080"
+      # remove 'localhost:' if you trust your network to access this service
+      - "127.0.0.1:6080:6080"
+      # the incoming soulseek connection port
+      - "2234:2234"
     volumes:
       - nicotine:/root/.nicotine
       - downloads:/root/nicotine-downloads

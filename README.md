@@ -1,15 +1,16 @@
 ## Typical Usage
 
-##### Using Docker CLI
+After adjusting `docker-compose.yml` to mount your shares and a download folder from the host,
+
+##### With upnp port forwarding first
 ```
-docker run -d --name nicotine --restart=always \
--v /persistent/nicotine:/root/.nicotine \
--v /persistent/downloads:/root/nicotine-downloads \
--p 6080:6080 \
-realies/nicotine
+upnp-and-run.sh
 ```
 
-##### Using Docker Compose
+##### Without
 ```
 docker-compose up -d
-```
+
+## Notes
+
+The web interface is only on localhost but that can be changed.
