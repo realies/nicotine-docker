@@ -2,7 +2,7 @@
 
 After adjusting `docker-compose.yml` to mount your shares and a download folder from the host,
 
-##### With upnp port forwarding first
+##### With upnp port forwarding
 ```
 upnp-and-run.sh
 ```
@@ -10,6 +10,7 @@ upnp-and-run.sh
 ##### Without
 ```
 docker-compose up -d
+```
 
 ## Notes
 
