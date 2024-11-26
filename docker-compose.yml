@@ -7,9 +7,12 @@ services:
       # the incoming soulseek connection port
       - "2234:2234"
     volumes:
+      # your user config is stored with the container, in the nicotine volume
       - nicotine:/root/.nicotine
-      - downloads:/root/nicotine-downloads
+      # the first paths here are on the host
+      # change this on setup:
+      - /home/s/Downloads/Soul:/root/nicotine-downloads
+      # change this on setup:
       - /media/s/be3654b3-8643-4a6e-9477-68327cc11ff5/Music:/root/nicotine-share:ro
 volumes:
   nicotine:
-  downloads:
