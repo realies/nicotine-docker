@@ -15,3 +15,5 @@ docker-compose up -d
 ## Notes
 
 The web interface is only on localhost but that can be changed.
+
+If your host system's user id (`$ id -u`) isn't 1000 you will have to edit `downloads-ownership.py`

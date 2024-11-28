@@ -8,7 +8,7 @@ run apk update && apk upgrade && \
  # create and activate a virtual environment to install Python dependencies inside
  python3 -m venv /root/venv && \
  . /root/venv/bin/activate && \
- pip install mutagen && \
+ pip install mutagen inotify_simple && \
  mkdir -p /root/nicotine-downloads && \
  sed -i "s/scale', false/scale', true/" /usr/share/novnc/vnc_lite.html && \
  ln -s /root/nicotine-downloads /usr/share/novnc && \
@@ -19,4 +19,6 @@ env GTK_THEME=Adwaita:dark
 
 add etc /etc
 add usr /usr
+add downloads-ownership.py /root/
+add downloads-ownership.sh /root/
 entrypoint ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
