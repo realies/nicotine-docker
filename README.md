@@ -1,6 +1,6 @@
 ## Typical Usage
 
-After adjusting `docker-compose.yml` to mount your shares and a download folder from the host,
+After adjusting `docker-compose.yml` to mount your shares and a download folder from the host, browse http://localhost:6080 after either:
 
 ##### With upnp port forwarding
 ```

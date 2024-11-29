@@ -2,7 +2,7 @@ services:
   nicotine:
     build: .
     ports:
-      # remove 'localhost:' if you trust your network to access this service
+      # remove '127.0.0.1:' if you trust your network to access this service
       - "127.0.0.1:6080:6080"
       # the incoming soulseek connection port
       - "2234:2234"
