@@ -4,7 +4,7 @@ After adjusting `docker-compose.yml` to mount your shares and a download folder 
 
 ##### With upnp port forwarding
 ```
-upnp-and-run.sh
+./upnp-and-run.sh
 ```
 
 ##### Without
