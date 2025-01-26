@@ -27,3 +27,4 @@ If your host system's user id (`$ id -u`) isn't 1000 you will have to edit `down
 ## Bugs
 
  - upnp process needs to be repeated after a while.
+ - UI slowness. should peel the top layer off the python code a put into javascript, to lower UI latency, eg to be able to scroll shares smoothly.
