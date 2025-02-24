@@ -1,0 +1,26 @@
+#!/bin/bash
+# launch script
+
+cd ~/src/nicotine-docker
+
+# Check if container is running and stop it if it is
+if docker compose ps | grep -q "nicotine"; then
+    echo "Stopping existing nicotine container..."
+    docker compose down
+fi
+
+docker compose up -d
+
+
+# Wait for x11vnc to be fully running
+echo "Waiting for VNC server to initialize..."
+while ! docker logs nicotine-docker-nicotine-1 2>&1 | grep -q "x11vnc entered RUNNING state"; do
+    sleep 1
+done
+# Add extra second for stability
+sleep 1
+
+vncviewer localhost:59234 &
+# < on an hourly loop
+#    without impeding compose down due to ignoring SIGINT during sleep()
+./upnp-and-run.sh

@@ -6,7 +6,17 @@
 
 ## Typical Usage
 
-After adjusting `docker-compose.yml` to mount your shares and a download folder from the host, browse http://localhost:6080 after either:
+Adjust `docker-compose.yml` to mount your shares and a download folder from the host, then:
+
+#### With vncviewer
+```
+./bin/nico
+```
+Faster and better to copy+paste with. It seems to favour the middle-click selection buffer. It also doesn't like copying from Qt or gtk apps (on wayland?), though pasting into the browser's address bar, selecting that, and then pasting into vncviewer works for me.
+
+#### With browser
+
+Browse http://localhost:6080 after either:
 
 ##### With upnp port forwarding
 ```
